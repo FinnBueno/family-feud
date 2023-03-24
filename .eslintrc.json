@@ -1,14 +1,6 @@
 {
-    "extends": [
-        "plugin:react/recommended",
-        "react-app",
-        "airbnb",
-        "prettier"
-    ],
-    "ignorePatterns": [
-        ".css",
-        ".svg"
-    ],
+    "extends": ["plugin:react/recommended", "react-app", "airbnb", "prettier"],
+    "ignorePatterns": [".css", ".svg"],
     "env": {
         "browser": true,
         "es2021": true
@@ -18,11 +10,7 @@
         "ecmaVersion": "latest",
         "sourceType": "module"
     },
-    "plugins": [
-        "react",
-        "@typescript-eslint",
-        "react-hooks"
-    ],
+    "plugins": ["react", "@typescript-eslint", "react-hooks"],
     "rules": {
         "import/prefer-default-export": "off",
         "import/extensions": [
@@ -44,9 +32,7 @@
         "react/jsx-filename-extension": [
             2,
             {
-                "extensions": [
-                    ".tsx"
-                ]
+                "extensions": [".tsx"]
             }
         ],
         "no-unused-vars": [
@@ -60,15 +46,13 @@
         "react/jsx-no-useless-fragment": "off",
         "react/jsx-uses-react": "off",
         "react/react-in-jsx-scope": "off",
-        "react/jsx-props-no-spreading": "off"
+        "react/jsx-props-no-spreading": "off",
+        "react/require-default-props": "off"
     },
     "settings": {
         "import/resolver": {
             "typescript": {
-                "extensions": [
-                    ".ts",
-                    ".tsx"
-                ]
+                "extensions": [".ts", ".tsx"]
             }
         }
     }

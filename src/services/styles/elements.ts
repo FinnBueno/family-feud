@@ -3,7 +3,7 @@ import { ThemeStyles } from 'theme-ui';
 const defaultHeadingStyle = {
     fontFamily: 'heading',
     fontWeight: 'heading',
-    color: 'primary',
+    color: 'body',
     mt: 4,
     mb: 2
 };
@@ -13,7 +13,7 @@ const HEADING_AMOUNT = 6;
 export const headingStyles = [...Array(HEADING_AMOUNT).keys()].reduce(
     (total: { [key: string]: object }, key) => ({
         ...total,
-        [`h${key}`]: {
+        [`h${key + 1}`]: {
             ...defaultHeadingStyle,
             fontSize: HEADING_AMOUNT - key
         }
@@ -21,6 +21,9 @@ export const headingStyles = [...Array(HEADING_AMOUNT).keys()].reduce(
     {}
 );
 
+// this is styles to apply to ALL related HTML elements
+// maybe this needs to be in variants instead?
+// cause this overrides variants
 export const styles: ThemeStyles = {
     ...headingStyles,
     p: {

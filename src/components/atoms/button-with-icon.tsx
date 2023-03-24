@@ -12,7 +12,7 @@ export const ButtonWithIcon: FC<ButtonProps & { icon: any }> = ({
                 alignItems: 'center'
             }}
         >
-            {icon}
+            <Flex mr={2}>{icon}</Flex>
             {children}
         </Flex>
     </Button>

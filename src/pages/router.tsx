@@ -5,6 +5,7 @@ import { Flex } from 'theme-ui';
 import { SignInPage } from 'pages/auth/sign-in';
 import { SignUpPage } from 'pages/auth/sign-up';
 import { MainPage } from 'pages/main';
+import { AdminPage } from 'pages/admin';
 
 export const AppRouter: FC<{}> = () => {
     const { authenticatedWrap, unauthenticatedWrap } = useAuth();
@@ -19,7 +20,8 @@ export const AppRouter: FC<{}> = () => {
                     path="/sign-up"
                     element={unauthenticatedWrap(SignUpPage)}
                 />
-                <Route path="/" element={authenticatedWrap(MainPage)} />
+                <Route path="/admin" element={authenticatedWrap(AdminPage)} />
+                <Route path="/" element={unauthenticatedWrap(MainPage)} />
             </Routes>
         </Flex>
     );

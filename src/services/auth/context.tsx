@@ -59,12 +59,12 @@ export const AuthProvider: FC<Children> = ({ children }) => {
                 return <Element />;
             }
             if (user && !shouldBeAuthed) {
-                return <Navigate to="/" />;
+                return <Navigate to="/admin" />;
             }
             if (!user && shouldBeAuthed) {
-                return <Navigate to="/sign-in" />;
+                return <Navigate to="/" />;
             }
-            return <Navigate to="/sign-in" />;
+            return <Navigate to="/" />;
         };
         return {
             user,

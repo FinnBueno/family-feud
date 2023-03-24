@@ -1,23 +1,24 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-// import { initializeApp } from 'firebase/app';
+import { initializeApp } from 'firebase/app';
 // import { connectAuthEmulator, getAuth } from 'firebase/auth';
 // import { connectDatabaseEmulator, getDatabase } from 'firebase/database';
 // import { connectStorageEmulator, getStorage } from 'firebase/storage';
 // import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 import { App } from './App';
 
-// initializeApp({
-//     apiKey: '',
-//     authDomain: '<id>.firebaseapp.com',
-//     databaseURL: 'https://<id>.europe-west1.firebasedatabase.app',
-//     projectId: '',
-//     storageBucket: '<id>.appspot.com',
-//     messagingSenderId: '',
-//     appId: '',
-//     measurementId: ''
-// });
+initializeApp({
+    apiKey: 'AIzaSyB6Vok-G0JozLpVPNT75DYx-qg32qfHou0',
+    authDomain: 'family-feud-37f28.firebaseapp.com',
+    databaseURL:
+        'https://family-feud-37f28-default-rtdb.europe-west1.firebasedatabase.app',
+    projectId: 'family-feud-37f28',
+    storageBucket: 'family-feud-37f28.appspot.com',
+    messagingSenderId: '187037567780',
+    appId: '1:187037567780:web:292016cb71082f506741b1',
+    measurementId: 'G-Z5TK4X8NS9'
+});
 
 // if (window.location.hostname === 'localhost') {
 //     connectAuthEmulator(getAuth(), 'http://localhost:9099');

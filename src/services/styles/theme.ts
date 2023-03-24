@@ -6,7 +6,11 @@ import { scales } from 'services/styles/scales';
 import { config } from 'services/styles/config';
 import { variants } from 'services/styles/variants';
 
-export const theme: Theme = {
+// TODO: Make this theme have proper types
+
+const makeTheme = <T extends Theme>(t: T) => t;
+
+export const theme = makeTheme({
     breakpoints: [40, 52, 64].map((n) => `${n}em`),
     // Example: [ '40em', '@media (min-width: 56em) and (orientation: landscape)', '64em' ],
 
@@ -21,4 +25,4 @@ export const theme: Theme = {
     ...variants,
 
     config
-};
+});
